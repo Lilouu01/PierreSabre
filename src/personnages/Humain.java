@@ -5,14 +5,13 @@ public class Humain {
     private String nom;
     private String boisson;
     private int argent;
-
+    
     public Humain(String nom, String boisson, int argent) {
         this.nom = nom;
         this.boisson = boisson;
         this.argent = argent;
     }
 
-    // Accesseurs
     public String getNom() {
         return nom;
     }
@@ -21,12 +20,12 @@ public class Humain {
         return argent;
     }
 
-    // Méthode privée utilitaire (visibility privée car uniquement utilisée en interne)
+    
     protected void parler(String texte) {
         System.out.println("(" + nom + ") - " + texte);
-    }
+    } 
 
-    // gagner/perdre argent : protected pour être accessibles aux sous-classes
+   
     protected void gagnerArgent(int gain) {
         this.argent += gain;
     }
@@ -41,7 +40,7 @@ public class Humain {
 
     public void boire() {
         parler("Mmmm, un bon verre de " + boisson + " ! GLOUPS !");
-    }
+    }   
 
     public void acheter(String bien, int prix) {
         if (argent >= prix) {
